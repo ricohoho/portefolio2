@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web design</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="un">
+        <div class="film">
+            <img class="ordi" id="ordi" src="odricv.png">
+            <img class="tel" id="tel" src="">
+        </div> 
+        <h6 class="TitreWeb">WEB</h6>
+            <div class="containtextVideo">
+                <h2 id="titreVideo" class="titreVideo">Mon Cv numérique</h2>
+                <p id="textVideo" class="textVideo">Ce Site internet à été réalisé au cours de ma première année de MMI, dans le cadre d'un projet de fin d'année. Codé entièrement par mes soins, j'espère qu'il vous plaiera.</p>
+                <p id="date" class="date">2019-2020</p>
+                <a id="link" href="#"><div class="button"><p class="regarder">REGARDER</p></div></a>
+            </div>
+        <div class="containVideo">
+        <a href="index.html"><img class="back" src="images\accueil\backs.png"></a>
+            <div class="videos">
+                <div class="boiteVideo">
+                    <a href="#" onclick="f_titre(1); return false;"><div class="video"><img src="images/films/cv.png" class="cv"></div></a>
+                </div>
+                <div class="boiteVideo">
+                    <a href="#" onclick="f_titre(2); return false;"><div class="video"></div></a>
+                </div>
+                <div class="boiteVideo">
+                    <a href="#" onclick="f_titre(3); return false;"><div class="video"><img src="images/films/kmf.png" class="kmf"></div></a>
+                </div>
+                <div class="boiteVideo">
+                    <a href="#" onclick="f_titre(4); return false;"><div class="video"><img src="images/films/lenez.png" class="lenez"></div></a>
+                </div>
+                <div class="boiteVideo">
+                    <a href="#" onclick="f_titre(5); return false;"><div class="video"><img src="images/films/kulty.png" class="kulty"></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function f_titre(numero){
+
+        switch (numero) {
+            case 1:
+                text="Mon Cv numérique";
+                sousText="Ce Site internet à été réalisé au cours de ma première année de MMI, dans le cadre d'un projet de fin d'année. Codé entièrement par mes soins, j'espère qu'il vous plaiera.";
+                date="2019/2020";
+                image="odricv.png";
+                images="";
+                break;
+            case 2:
+                text="Mon portrait Chinois";
+                sousText="Le portrait chinois est un moyen de se présenter en évitant le côté solenel du CV. J'ai donc codé avec mes connaissances de première année ce projet qui m'a énormément appris."
+                date="2019/2020";
+                image="odriPortr.png";
+                images="";
+                break;
+            case 3:
+                text="Karine Marteau-Fassel";
+                sousText="J'ai réalisé ce site internet pour les besoins d'une avocate en manque de visibilité sur internet et souhaitant accroitre sa clientèle."
+                date="2020";
+                image="odrikmf.png";
+                images="";
+                break;
+            case 4:
+                text="Le nez au vent";
+                sousText="Le site de la compagnie de théâtre à été une experience professionel très enrichissante. J'ai réalisé le site avec Wix.com mais avec un travail préalable sérieux."
+                date="2020";
+                link="https://lenezauvent.wixsite.com/saint-maur";
+                image="odrilenez.png";
+                images="";
+                break;
+            case 5:
+                text="Kulty";
+                sousText="KUlty est un réseaux social développé en projet tutorée durant ma formaion MMI. Il porte sur les expositions temporaires à Paris et propose un service de partage et de répertoriage poussé. Elle est actuellement disponible sur le site Kulty-app.fr."
+                date="2020";
+                link="https://lenezauvent.wixsite.com/saint-maur";
+                image="odriKulty.png";
+                images="smartphone.png";
+                break;
+        }
+        document.getElementById("titreVideo").textContent =text;
+        document.getElementById("textVideo").textContent =sousText;
+        document.getElementById("date").textContent =date;
+        document.getElementById("link").href =link;
+        document.getElementById("ordi").src = image;
+        document.getElementById("tel").src = images;
+    }
+</script>

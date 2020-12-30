@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>film</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="un">
+        <div class="film">
+            <img class="ordi" src="images\films\ordi.png">
+        </div>
+        <h6 class="TitreFilm">FILMS</h6>
+            <div class="containtextVideo">
+                <h2 id="titreVideo" class="titreVideo">Etranger/Etrangère</h2>
+                <p id="textVideo" class="textVideo">
+                    Ce court-métrage à été réalisé pour
+                    un concours d'inscription à l'école
+                    ESIS à paris, proposé aux lycéens.</p>
+                <p id="date" class="date">2018/2019</p>
+                <a id="link" href="https://youtu.be/YIFZ1xVlWQs"><div class="button"><p class="regarder">REGARDER</p></div></a>
+            </div>
+        <div class="containVideo">
+            <a href="index.html"><img class="back" src="images\accueil\backs.png"></a> 
+            <div class="videos">
+                <div class="boiteVideo">
+                    <a href="#" onclick="f_titre(1); return false;"><div class="video"><img src="images/films/esis.png" class="esis"></div></a>
+                </div>
+                <div class="boiteVideo">
+                    <a href="#" onclick="f_titre(2); return false;"><div class="video"><img src="images/films/bon.png" class="bon"></div></a>
+                </div>
+                <div class="boiteVideo">
+                    <a href="#" onclick="f_titre(3); return false;"><div class="video"><img src="images/films/cv.png" class="cv"></div></a>
+                </div>
+                <div class="boiteVideo">
+                    <a href="#" onclick="f_titre(4); return false;"><div class="video"><img src="images/films/turnintup.png" class="turnup"></div></a>
+                </div>
+                <div class="boiteVideo">
+                    <a href="#" onclick="f_titre(5); return false;"><div class="video"><img src="images/films/flamme.png" class="flamme"></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function f_titre(numero){
+
+        switch (numero) {
+            case 1:
+                text="Etranger/Etrangère";
+                sousText="Ce court-métrage à été réalisé pour un concours d'inscription à l'école ESIS à paris, proposé aux lycéens.";
+                date="2018/2019";
+                link="https://youtu.be/YIFZ1xVlWQs"
+                break;
+            case 2:
+                text="'BON'";
+                sousText="Ce court-métrage à été réalisé, lors de ma première année de MMI dans le cadre d'un projet de fin d'année, en collaboration avec Mickael LIU, Martin GARCIA et Ulysse GRAVIER."
+                date="2019/2020"
+                break;
+            case 3:
+                text="Cv Audiovisuel";
+                sousText="Ce court-métrage à été réalisé, lors de ma deuxième année de MMI dans le cadre d'un projet de fin d'année en Anglais, Il me sert actuellement pour trouver des activités professionelles."
+                date="2020/2021"
+                break;
+            case 4:
+                text="Turn it up!";
+                sousText="Ce clip musical à été réalisé avec des amis à l'improviste avec donc un materiel très peu qualitatif mais fait avec passion."
+                date="2020"
+                link="https://youtu.be/wAWeV6p_VM4"
+                break;
+            case 5:
+                text="La flamme";
+                sousText="Ce court-métrage d’animation à été réalisé par moi même dans le cadre d’un projet de fin d’année de MMI2. J’ai particulièrement soigné mon travail sur le scénario, ayant connu un drame dans ma famille lors de la réalisation, j’ai décidé de lui rendre hommage à travers ce projet. J'espère que cette animation lourde de sens vous plaira."
+                date="2020"
+                link="https://youtu.be/wAWeV6p_VM4"
+                break;
+        }
+        document.getElementById("titreVideo").textContent =text;
+        document.getElementById("textVideo").textContent =sousText;
+        document.getElementById("date").textContent =date;
+        document.getElementById("link").href =link;
+    }
+</script>
